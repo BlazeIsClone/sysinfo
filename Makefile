@@ -1,2 +1,2 @@
 run:
-	gcc main.c -o opt && ./opt
+	gcc src/*.c main.c -o opt && ./opt
