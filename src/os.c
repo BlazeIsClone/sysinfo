@@ -2,10 +2,12 @@
 #include <unistd.h>
 #include <sys/utsname.h>
 
-void get_os() {
+void get_os()
+{
     struct utsname buffer;
 
-    if (uname(&buffer) != 0) {
+    if (uname(&buffer) != 0)
+    {
         perror("uname");
         return;
     }
@@ -16,5 +18,3 @@ void get_os() {
     printf("version: %s\n", buffer.version);
     printf("machine: %s\n", buffer.machine);
 }
-
-

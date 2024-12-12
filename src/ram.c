@@ -2,11 +2,13 @@
 #include <sys/utsname.h>
 #include <unistd.h>
 
-void get_ram() {
+void get_ram()
+{
     long pages = sysconf(_SC_PHYS_PAGES);
     long page_size = sysconf(_SC_PAGE_SIZE);
 
-    if (pages == -1 || page_size == -1) {
+    if (pages == -1 || page_size == -1)
+    {
         perror("sysconf");
         return;
     }
